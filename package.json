@@ -8,7 +8,8 @@
     "main": "index.js",
     "scripts": {
         "start": "node src/index.js",
-        "build": "cd web && npm run docs && cd .. && rm -rf public && mv web/docs public",
+        "build": "npm install",
+        "build-web": "cd web && npm run docs && cd .. && rm -rf public && mv web/docs public",
         "dev": "nodemon src/index.js"
     },
     "repository": {
