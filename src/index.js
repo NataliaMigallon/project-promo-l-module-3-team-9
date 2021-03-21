@@ -45,17 +45,40 @@ app.post("/card", (req, res) => {
   // console request body params
   const response = {};
   console.log(req.body);
-  /*   for (let item in req.body) {
+  for (let item in req.body) {
     if (!item) {
       (response.success = false),
         (response.error = `Missing ${item} parameter`);
     } else {
       //todo ok -> save to db
+      const query = db.prepare(
+        "INSERT INTO cards (name, job, photo, phone, email, linkedin, github, palette) VALUES (?,?,?,?,?,?,?,?)"
+      );
+      const result = query.run(
+        req.body.name,
+        req.body.job,
+        req.body.photo,
+        req.body.phone,
+        req.body.email,
+        req.body.linkedin,
+        req.body.github,
+        req.body.palette
+      );
       response.success = true;
-      response.cardURL = "PONER DIRECCIÓN herokua";
+      if (req.host === "localhost") {
+        response.cardURL =
+          "http://localhost:3001/card/" + result.lastInsertRowid;
+      } else {
+        response.cardURL =
+          "https://delicious-profile-card.herokuapp.com/card/" +
+          result.lastInsertRowid;
+      }
     }
-  } */
-  if (!req.body.name) {
+  }
+  res.json(response);
+});
+
+/* if (!req.body.name) {
     response.success = false;
     response.error = "Missing name parameter";
   } else if (!req.body.job) {
@@ -100,7 +123,6 @@ app.post("/card", (req, res) => {
         "https://delicious-profile-card.herokuapp.com/card/" +
         result.lastInsertRowid;
     }
-  }
-
+  } 
   res.json(response);
-});
+});*/
