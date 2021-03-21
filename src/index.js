@@ -96,7 +96,7 @@ app.post("/card", (req, res) => {
     if (req.host === "localhost") {
       response.cardURL = "http://localhost:3001/card/" + result.lastInsertRowid;
     } else {
-      req.host =
+      response.cardURL =
         "https://delicious-profile-card.herokuapp.com/card/" +
         result.lastInsertRowid;
     }
