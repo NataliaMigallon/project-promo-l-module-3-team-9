@@ -1,135 +1,130 @@
-// .mainContainer {
-//   width: 100%;
-//   display: flex;
-//   flex-direction: column;
-//   height: 100vh;
-// }
 .main {
-    width: 100vw;
-    height: calc(100vh - 120px);
-    display: flex;
-    flex-grow: 1;
-    flex-direction: column;
-    align-items: center;
-    justify-content: flex-end;
-    background-color: $colorBgHome;
+  width: 100vw;
+  height: calc(100vh - 120px);
+  display: flex;
+  flex-grow: 1;
+  flex-direction: column;
+  align-items: center;
+  justify-content: flex-end;
+  background-color: $colorBgHome;
+  @include tablet {
+    height: calc(100vh - 61px);
+  }
+  &__logo {
+    width: rem(250);
+    height: rem(63);
+    margin-bottom: rem(35);
     @include tablet {
-        height: calc(100vh - 61px);
+      width: rem(419);
+      height: rem(105);
+      margin-bottom: rem(31);
     }
-    &__logo {
-        width: rem(250);
-        height: rem(63);
-        margin-bottom: rem(35);
-        @include tablet {
-            width: rem(419);
-            height: rem(105);
-            margin-bottom: rem(31);
-        }
-        &--image {
-            width: 100%;
-        }
+    &--image {
+      width: 100%;
     }
-    &__slogan {
-        display: flex;
-        flex-direction: column;
-        justify-content: center;
-        align-items: center;
-        margin-bottom: rem(18);
-        @include tablet {
-            margin-bottom: rem(27);
-        }
-        &--title {
-            color: $colorIcon;
-            font-family: $fontTitle;
-            font-size: rem(19);
-            @include tablet {
-                font-size: rem(24);
-            }
-        }
-        &--text {
-            width: rem(264.8);
-            text-align: center;
-            color: $colorMediaA;
-            font-size: rem(13);
-            font-family: $fontText;
-            @include tablet {
-                width: rem(331);
-                font-size: rem(16);
-            }
-        }
+  }
+  &__slogan {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    margin-bottom: rem(18);
+    @include tablet {
+      margin-bottom: rem(27);
     }
-    &__icons {
-        display: flex;
-        flex-direction: row;
-        justify-content: space-around;
-        align-items: center;
-        width: rem(268);
-        height: rem(73);
-        margin-bottom: rem(39);
-        border: solid rem(1.6) rgba($color: $colorIcon, $alpha: 0.21);
-        border-radius: rem(4);
-        @include tablet {
-            width: rem(325);
-            height: rem(86);
-            border: solid rem(2) rgba($color: $colorIcon, $alpha: 0.21);
-            border-radius: rem(5);
-        }
-        &--tandem {
-            display: flex;
-            flex-direction: column;
-            justify-content: center;
-            align-items: center;
-            width: rem(60);
-            height: rem(49);
-            @include tablet {
-                width: rem(75);
-                height: rem(61);
-                margin: 0 rem(15);
-            }
-        }
-        &--sections {
-            font-family: $fontText;
-            color: $colorSections;
-            font-size: rem(13);
-            @include tablet {
-                font-size: rem(16);
-            }
-        }
+    &--title {
+      color: $colorIcon;
+      font-family: $fontTitle;
+      font-size: rem(19);
+      @include tablet {
+        font-size: rem(24);
+      }
     }
-    &__start {
-        &--btn {
-            width: rem(129);
-            height: rem(42);
-            display: flex;
-            justify-content: center;
-            align-items: center;
-            margin-bottom: rem(30);
-            border: none;
-            border-radius: rem(21);
-            background-color: $colorMediaA;
-            color: $colorBg;
-            text-transform: uppercase;
-            font-family: $fontText;
-            font-weight: 600;
-            cursor: pointer;
-            transition-property: transform(0.5 ease, box-shadow);
-            transition-duration: 0.3s;
-            &:hover {
-                transform: scale(1.1);
-            }
-            @include tablet {
-                margin-bottom: rem(59);
-            }
-        }
+    &--text {
+      width: rem(264.8);
+      text-align: center;
+      color: $colorMediaA;
+      font-size: rem(13);
+      font-family: $fontText;
+      @include tablet {
+        width: rem(331);
+        font-size: rem(16);
+      }
     }
+  }
+  &__icons {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-around;
+    align-items: center;
+    width: rem(268);
+    height: rem(73);
+    margin-bottom: rem(39);
+    border: solid rem(1.6) rgba($color: $colorIcon, $alpha: 0.21);
+    border-radius: rem(4);
+    @include tablet {
+      width: rem(325);
+      height: rem(86);
+      border: solid rem(2) rgba($color: $colorIcon, $alpha: 0.21);
+      border-radius: rem(5);
+    }
+    &--tandem {
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      align-items: center;
+      width: rem(60);
+      height: rem(49);
+      @include tablet {
+        width: rem(75);
+        height: rem(61);
+        margin: 0 rem(15);
+      }
+    }
+    &--sections {
+      font-family: $fontText;
+      color: $colorSections;
+      font-size: rem(13);
+      @include tablet {
+        font-size: rem(16);
+      }
+    }
+  }
+  &__start {
+    &--btn {
+      width: rem(129);
+      height: rem(42);
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      margin-bottom: rem(30);
+      border: none;
+      border-radius: rem(21);
+      background-color: $colorMediaA;
+      color: $colorBg;
+      text-transform: uppercase;
+      font-family: $fontText;
+      font-weight: 600;
+      cursor: pointer;
+      transition-property: transform(0.5 ease, box-shadow);
+      transition-duration: 0.3s;
+      &:hover {
+        transform: scale(1.1);
+      }
+      @include tablet {
+        margin-bottom: rem(59);
+      }
+    }
+  }
 }
 
 .iconMain {
-    color: $colorIcon;
-    font-size: rem(22.4);
-    @include tablet {
-        font-size: rem(28);
-    }
+  color: $colorIcon;
+  font-size: rem(22.4);
+  @include tablet {
+    font-size: rem(28);
+  }
 }
 
-.shake-slow {}
+.shake-slow {
+}

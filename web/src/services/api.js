@@ -1,34 +1,9 @@
-// const senddatatoapi = (data) => {
-//   return fetch("http://localhost:3001/card", {
-//     method: "POST",
-//     body: JSON.stringify(data),
-//     headers: {
-//       "Content-Type": "application/json",
-//     },
-//   })
-//     .then((response) => response.json())
-//     .then((data) => {
-//       return data;
-//     });
-// };
-
-// export default senddatatoapi;
-
-/* const isDevEnviroment = process.env.NODE_ENV === "development"; // Booleano
-const apiUrl = isDevEnviroment
-  ? "http://localhost:3001"
-  : "https://delicious-profile-card.herokuapp.com/"; */
-
 const getCard = () => {
-  return (
-    fetch(`/card/:id:/`)
-      //return fetch("http://localhost:3001/card/card")
-
-      .then((response) => response.json())
-      .then((data) => {
-        return data;
-      })
-  );
+  return fetch(`/card/:id:/`)
+    .then((response) => response.json())
+    .then((data) => {
+      return data;
+    });
 };
 
 const sendCard = (data) => {

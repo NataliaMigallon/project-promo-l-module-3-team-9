@@ -8,11 +8,6 @@ const Share = (props) => {
 
   const handleButton = (ev) => {
     ev.preventDefault();
-
-    //   senddatatoapi(userData).then((card) => {
-    //     props.handleButtonLifting(card);
-    //   });
-    // };
     api.sendCard(userData).then((card) => {
       props.handleButtonLifting(card);
     });

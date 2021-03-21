@@ -1,110 +1,109 @@
 @import "../core/mixins";
 @import "../core/variables";
 .shareContainer {
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    align-items: center;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
 }
 
 .share {
-    padding: rem(25) 0 rem(15) 0;
-    &__btn {
-        display: flex;
-        flex-direction: row;
-        justify-content: center;
-        align-items: center;
-        width: rem(199);
-        height: rem(50);
-        background-color: $colorIcon;
-        border-radius: rem(12);
-        box-shadow: 0 rem(1) rem(6) 0 rgba(0, 0, 0, 0.32);
-        cursor: pointer;
-        transition-property: transform(0.5 ease, box-shadow);
-        transition-duration: 0.3s;
-        &:hover {
-            transform: scale(1.1);
-        }
-        &--icon {
-            padding-right: rem(17);
-            width: rem(25);
-            height: rem(22);
-        }
-        &--text {
-            background-color: transparent;
-            border: none;
-            font-family: $fontText;
-            font-size: rem(18);
-            color: $colorBg;
-            text-transform: uppercase;
-            cursor: pointer;
-            @include fontNormal {
-                font-weight: 500;
-            }
-        }
+  padding: rem(25) 0 rem(15) 0;
+  &__btn {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+    width: rem(199);
+    height: rem(50);
+    background-color: $colorIcon;
+    border-radius: rem(12);
+    box-shadow: 0 rem(1) rem(6) 0 rgba(0, 0, 0, 0.32);
+    cursor: pointer;
+    transition-property: transform(0.5 ease, box-shadow);
+    transition-duration: 0.3s;
+    &:hover {
+      transform: scale(1.1);
     }
+    &--icon {
+      padding-right: rem(17);
+      width: rem(25);
+      height: rem(22);
+    }
+    &--text {
+      background-color: transparent;
+      border: none;
+      font-family: $fontText;
+      font-size: rem(18);
+      color: $colorBg;
+      text-transform: uppercase;
+      cursor: pointer;
+      @include fontNormal {
+        font-weight: 500;
+      }
+    }
+  }
 }
 
 .created {
-    /* display: none; */
-    height: rem(123);
-    padding-top: rem(20);
+  height: rem(123);
+  padding-top: rem(20);
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: space-between;
+  &__link {
+    font-weight: 600;
+    font-size: 16px;
+  }
+  &__title {
+    font-family: $fontText;
+    font-size: $sizeSmall;
+    color: #54585a;
+    @include fontNormal {
+      font-weight: 600;
+    }
+  }
+  &__url {
+    font-family: $fontText;
+    font-size: rem(12);
+    color: $colorIcon;
+    padding: rem(10) 0;
+    text-decoration: underline;
+  }
+  &__btnTwitter {
+    width: rem(181);
+    height: rem(30);
+    padding: rem(8) 0 rem(10) 0;
+    margin-top: rem(15);
+    margin-bottom: rem(20);
+    border-radius: rem(3);
+    border: none;
+    background-color: #00a0f5;
+    box-shadow: 0 0 rem(4) 0 rgba(0, 0, 0, 0.32);
+    color: $colorBg;
+    font-size: $sizeSmall;
+    @include fontNormal;
+    cursor: pointer;
+    transition-property: transform(0.5 ease, box-shadow);
+    transition-duration: 0.3s;
+    &:hover {
+      transform: scale(1.1);
+    }
+  }
+  &__error {
+    padding: rem(20) 0;
     display: flex;
     flex-direction: column;
     align-items: center;
-    justify-content: space-between;
-    &__link {
-        font-weight: 600;
-        font-size: 16px;
+    &--title {
+      font-family: $fontText;
+      font-size: $sizeSmall;
+      color: #54585a;
     }
-    &__title {
-        font-family: $fontText;
-        font-size: $sizeSmall;
-        color: #54585a;
-        @include fontNormal {
-            font-weight: 600;
-        }
-    }
-    &__url {
-        font-family: $fontText;
-        font-size: rem(12);
-        color: $colorIcon;
-        padding: rem(10) 0;
-        text-decoration: underline;
-    }
-    &__btnTwitter {
-        width: rem(181);
-        height: rem(30);
-        padding: rem(8) 0 rem(10) 0;
-        margin-top: rem(15);
-        margin-bottom: rem(20);
-        border-radius: rem(3);
-        border: none;
-        background-color: #00a0f5;
-        box-shadow: 0 0 rem(4) 0 rgba(0, 0, 0, 0.32);
-        color: $colorBg;
-        font-size: $sizeSmall;
-        @include fontNormal;
-        cursor: pointer;
-        transition-property: transform(0.5 ease, box-shadow);
-        transition-duration: 0.3s;
-        &:hover {
-            transform: scale(1.1);
-        }
-    }
-    &__error {
-        padding: rem(20) 0;
-        display: flex;
-        flex-direction: column;
-        align-items: center;
-        &--title {
-            font-family: $fontText;
-            font-size: $sizeSmall;
-            color: #54585a;
-        }
-    }
+  }
 }
 
 .created--hidden {
-    display: none;
+  display: none;
 }
