@@ -1,41 +1,41 @@
 @import "../core/_variables.scss";
 @import "../core/_mixins.scss";
 .footer {
-    width: 100%;
-    height: rem(120);
-    border-top: solid rem(1) $colorBorFooter;
+  width: 100%;
+  height: rem(120);
+  border-top: solid rem(1) $colorBorFooter;
+  @include tablet {
+    height: rem(60);
+  }
+  &__wrapper {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
     @include tablet {
-        height: rem(60);
+      flex-direction: row;
+      justify-content: space-between;
+      max-width: rem(1200);
+      padding: 0 rem(40);
+      margin: 0 auto;
     }
-    &__wrapper {
-        display: flex;
-        flex-direction: column;
-        align-items: center;
-        @include tablet {
-            flex-direction: row;
-            justify-content: space-between;
-            max-width: rem(1200);
-            padding: 0 rem(40);
-            margin: 0 auto;
-        }
-        &--copy {
-            color: rgba($color: $colorSmall, $alpha: 0.5);
-            font-family: $fontText;
-            font-size: rem(14);
-            margin-top: rem(18);
-            line-height: rem(20);
-            @include tablet {
-                margin-top: 0;
-            }
-        }
-        &--adalab {
-            width: rem(103);
-            height: rem(40);
-            margin-top: rem(12);
-            margin-bottom: rem(20);
-            @include tablet {
-                margin: rem(10) rem(0) rem(10) rem(193);
-            }
-        }
+    &--copy {
+      color: rgba($color: $colorSmall, $alpha: 0.5);
+      font-family: $fontText;
+      font-size: rem(14);
+      margin-top: rem(18);
+      line-height: rem(20);
+      @include tablet {
+        margin-top: 0;
+      }
     }
+    &--adalab {
+      width: rem(103);
+      height: rem(40);
+      margin-top: rem(12);
+      margin-bottom: rem(20);
+      @include tablet {
+        margin: rem(10) rem(0) rem(10) rem(193);
+      }
+    }
+  }
 }
